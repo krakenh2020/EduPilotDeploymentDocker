@@ -6,16 +6,18 @@ services:
 
 ### University Frontend #######################################################
 
-
-# TODO: dockerize https://github.com/krakenh2020/EduPilotPrototype1
-# at port UNIVERSITY_FRONTEND_PORT
+  university.demo:
+    image: docker.pkg.github.com/krakenh2020/edupilotprototype1/kraken-edu_connector:latest
+    working_dir: /application
+    ports:
+      - "${UNIVERSITY_FRONTEND_PORT}:80"
 
 
 ### University Backend/API ####################################################
 # production system is at https://api.tugraz.at
 
   api.university-api.demo:
-    image: kraken-edu_frontend:latest 
+    image: docker.pkg.github.com/krakenh2020/edupilotbackend/kraken-edu_frontend:latest
     working_dir: /application
     volumes:
       #- ..:/application
@@ -24,7 +26,7 @@ services:
       - "${UNIVERSITY_APIPLATFORM_PORT}:80"
 
   php-fpm.university-api.demo:
-    image: kraken-edu_php:latest
+    image: docker.pkg.github.com/krakenh2020/edupilotbackend/kraken-edu_php:latest
     # port: 9000
     environment:
       - TERM_PROGRAM=Hyper  # force colors for the symfony dumper
