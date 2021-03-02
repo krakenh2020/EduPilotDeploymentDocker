@@ -25,7 +25,8 @@ docker-compose up --force-recreate
     - [kraken-edu_frontend](https://github.com/krakenh2020/EduPilotBackend/packages/629067)
 * Aries Agent: https://github.com/hyperledger/aries-framework-go
     - [agent-rest](https://github.com/hyperledger/aries-framework-go/packages/69982)
-    - [webhook](https://github.com/hyperledger/aries-framework-go/blob/main/images/mocks/webhook/Dockerfile) (needs to be build locally)
+    - [webhook](https://github.com/hyperledger/aries-framework-go/blob/main/images/mocks/webhook/Dockerfile) 
+      - at the moment, this image needs to be build locally: `make sample-webhook-docker` in [aries-framework-go](https://github.com/hyperledger/aries-framework-go)
 * Sidetree: *TODO*
 
 
