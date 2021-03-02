@@ -12,7 +12,7 @@ as a technologically enhanced administration (TEA) marketplace project.
 * don't forget to `docker login` without your GitHub credentials
 
 ```bash
-./generate_demo_keys.sh
+sh generate_demo_keys.sh
 docker-compose up --force-recreate
 ```
 
