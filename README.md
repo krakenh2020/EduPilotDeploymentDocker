@@ -35,12 +35,12 @@ docker-compose up --force-recreate
 * University connector: http://localhost:8080
 * University API: http://localhost:8000/
 * University Aries Agent:
-    - API: http://localhost:8082/
-    - Inbound: http://localhost:8081/
+    - API: https://localhost:8082/
+    - Inbound: https://localhost:8081/
     - Webhook: http://localhost:8083/
 * Student Aries Agent:
-    - API: http://localhost:8092/
-    - Inbound: http://localhost:8091/
+    - API: https://localhost:8092/
+    - Inbound: https://localhost:8091/
     - Webhook: http://localhost:8093/
 
 
