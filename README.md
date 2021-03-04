@@ -33,7 +33,7 @@ docker-compose up --force-recreate
 
 ## Exposed Services
 
-* University connector: http://localhost:8080
+* University connector: http://localhost:8001
 * University API: http://localhost:8000/
 * University Aries Agent:
     - API: https://localhost:8082/
