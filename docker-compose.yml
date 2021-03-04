@@ -24,6 +24,9 @@ services:
       - ./webserver/nginx.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "${UNIVERSITY_APIPLATFORM_PORT}:80"
+    networks:
+      - kraken_edu_agent_net
+      - kraken_edu_university_net
 
   php-fpm.university-api.demo:
     image: docker.pkg.github.com/krakenh2020/edupilotbackend/kraken-edu_php:latest
@@ -35,9 +38,13 @@ services:
       #- ..:/application 
       - ./php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
       - ./php-fpm/php-fpm-overrides.conf:/etc/php/7.3/fpm/pool.d/z-overrides.conf
+    networks:
+      - kraken_edu_university_net
 
   redis.university-api.demo:
     image: "redis"
+    networks:
+      - kraken_edu_university_net
 
   # redis-commander:
   #   image: "rediscommander/redis-commander"
@@ -145,10 +152,13 @@ services:
 
 
 networks:
-  kraken_edu_external_net:
+  #kraken_edu_external_net:
 
   kraken_edu_agent_net:
     # a bridge network uses a software bridge which allows containers connected to the same bridge network 
     # to communicate, while providing isolation from containers which are not connected to that bridge network
+    driver: bridge
+    
+  kraken_edu_university_net:
     driver: bridge
 
