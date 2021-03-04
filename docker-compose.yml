@@ -25,8 +25,8 @@ services:
     ports:
       - "${UNIVERSITY_APIPLATFORM_PORT}:80"
     networks:
-      - kraken_edu_agent_net
-      - kraken_edu_university_net
+      - kraken_edu_agent_net # API calls aries agent
+      - kraken_edu_university_net # API calls PHP container and redis container
 
   php-fpm.university-api.demo:
     image: docker.pkg.github.com/krakenh2020/edupilotbackend/kraken-edu_php:latest
@@ -39,12 +39,12 @@ services:
       - ./php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
       - ./php-fpm/php-fpm-overrides.conf:/etc/php/7.3/fpm/pool.d/z-overrides.conf
     networks:
-      - kraken_edu_university_net
+      - kraken_edu_university_net # PHP container called by API
 
   redis.university-api.demo:
     image: "redis"
     networks:
-      - kraken_edu_university_net
+      - kraken_edu_university_net # redis container called by API
 
   # redis-commander:
   #   image: "rediscommander/redis-commander"
@@ -94,7 +94,7 @@ services:
     entrypoint: ""
     command:  /bin/sh -c "cp /etc/tls/* /usr/local/share/ca-certificates/;update-ca-certificates; aries-agent-rest start"
     networks:
-      - kraken_edu_agent_net
+      - kraken_edu_agent_net # agent calling webhook, agent called by API
 
   # University Aries Agent Callback Webhook
   webhook.university-agent.demo:
@@ -105,7 +105,7 @@ services:
     ports:
       - ${UNIVERSITY_WEBHOOK_PORT}:${UNIVERSITY_WEBHOOK_PORT}
     networks:
-      - kraken_edu_agent_net
+      - kraken_edu_agent_net # webbook called by agent
 
 
 
@@ -133,7 +133,7 @@ services:
     entrypoint: ""
     command:  /bin/sh -c "cp /etc/tls/* /usr/local/share/ca-certificates/;update-ca-certificates; aries-agent-rest start"
     networks:
-      - kraken_edu_agent_net
+      - kraken_edu_agent_net # agent calling webhook, agent called by API
 
   # Student Aries Agent Callback Webhook
   webhook.student-agent.demo:
@@ -144,7 +144,7 @@ services:
     ports:
       - ${STUDENT_WEBHOOK_PORT}:${STUDENT_WEBHOOK_PORT}
     networks:
-      - kraken_edu_agent_net
+      - kraken_edu_agent_net # webbook called by agent
 
 
   # TODO: Sidetree Mock
