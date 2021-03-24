@@ -39,6 +39,7 @@ services:
       - ./php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
       - ./php-fpm/php-fpm-overrides.conf:/etc/php/7.3/fpm/pool.d/z-overrides.conf
     networks:
+      - kraken_edu_agent_net # API calls aries agent
       - kraken_edu_university_net # PHP container called by API
 
   redis.university-api.demo:
@@ -116,15 +117,15 @@ services:
     environment:
       - ARIESD_API_HOST=${STUDENT_HOST}:${STUDENT_API_PORT}
       - ARIESD_INBOUND_HOST=${HTTP_SCHEME}@${STUDENT_HOST}:${STUDENT_INBOUND_PORT}
-      - ARIESD_INBOUND_HOST_EXTERNAL=${HTTP_SCHEME}@https://agent.student-agent.demo:${STUDENT_INBOUND_PORT}
+      - ARIESD_INBOUND_HOST_EXTERNAL=${HTTP_SCHEME}@http://agent.student-agent.demo:${STUDENT_INBOUND_PORT}
       - ARIESD_WEBHOOK_URL=http://${STUDENT_WEBHOOK_CONTAINER_NAME}:${STUDENT_WEBHOOK_PORT}
       - ARIESD_DEFAULT_LABEL=student-agent
       - ARIESD_DATABASE_TYPE=leveldb
       - ARIESD_DATABASE_PREFIX=student
       - ARIESD_DATABASE_TIMEOUT=60
       - ARIESD_HTTP_RESOLVER=${HTTP_DID_RESOLVER}
-      - TLS_CERT_FILE=/etc/tls/ec-pubCert.pem
-      - TLS_KEY_FILE=/etc/tls/ec-key.pem
+      #- TLS_CERT_FILE=/etc/tls/ec-pubCert.pem
+      #- TLS_KEY_FILE=/etc/tls/ec-key.pem
     volumes:
       - ./keys/tls:/etc/tls
     ports:
