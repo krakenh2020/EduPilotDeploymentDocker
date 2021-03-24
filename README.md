@@ -35,14 +35,19 @@ docker-compose up --force-recreate
 
 * University connector: http://localhost:8001
 * University API: http://localhost:8000/
-* University Aries Agent:
+* University Aries Agent: (with TLS)
     - API: https://localhost:8082/
     - Inbound: https://localhost:8081/
     - Webhook: http://localhost:8083/
-* Student Aries Agent:
-    - API: https://localhost:8092/
-    - Inbound: https://localhost:8091/
+* Student Aries Agent: (no TLS)
+    - API: http://localhost:8092/
+    - Inbound: http://localhost:8091/
     - Webhook: http://localhost:8093/
 
+
+### To test mobile wallet of student:
+
+* Agent: `http://10.0.2.2:8092`
+* Agent WS: `ws://10.0.2.2:8092/ws`
 
 
