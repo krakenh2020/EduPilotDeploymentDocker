@@ -27,13 +27,12 @@ def step(s, agentId=1):
 
 def printJSON(d):
     print('```json')
-    print(type(d))
     if isinstance(d, dict):
     	print(json.dumps(d, indent=4))
     elif isinstance(d, str):
     	print(json.dumps(json.loads(d), indent=4))
     else:
-    	print(type(d))
+    	print(d)
     print('```')
     print()
 
