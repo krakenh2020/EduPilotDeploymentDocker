@@ -27,7 +27,13 @@ def step(s, agentId=1):
 
 def printJSON(d):
     print('```json')
-    print(d)
+    print(type(d))
+    if isinstance(d, dict):
+    	print(json.dumps(d, indent=4))
+    elif isinstance(d, str):
+    	print(json.dumps(json.loads(d), indent=4))
+    else:
+    	print(type(d))
     print('```')
     print()
 
@@ -137,7 +143,7 @@ details = requests.get(
     connectionIDagent2,
     verify=False)
 print('connection agent 2: ')
-printJSON(str(details.json()['result']))
+printJSON(details.json()['result'])
 
 print('* MyDID:    ' + str(details.json()['result']['MyDID']))
 print('* TheirDID: ' + str(details.json()['result']['TheirDID']))
@@ -151,7 +157,7 @@ connections = requests.get(AGENT1 + '/connections', verify=False).json()
 for connection in connections['results']:
     if connection['InvitationID'] == inviteIDagent1:
         print('connection agent 1: ')
-        printJSON(str(connection))
+        printJSON(connection)
         connectionIDagent1 = connection['ConnectionID']
 
         print('* MyDID:    ' + str(connection['MyDID']))
@@ -303,7 +309,7 @@ r = requests.get(AGENT2 + '/issuecredential/actions', verify=False).json()
 
 for offer in r['actions']:
     print('credential offer:')
-    printJSON(str(offer))
+    printJSON(offer)
     piid = offer['PIID']
 
     r_credofferaccept = requests.post(
