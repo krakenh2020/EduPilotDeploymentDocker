@@ -9,9 +9,9 @@
     "invitation": {
         "serviceEndpoint": "https://agent.university-agent.demo:8081",
         "recipientKeys": [
-            "did:key:z6Mkm5hbK52JfbKWTWkndTie3xj19Ys23rR9rM7Nq4DFstai"
+            "did:key:z6Mkw38zvkXGvTuPiTzgAnbzTe5ZfxBnWsnMjAYLsmVWLMj1"
         ],
-        "@id": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+        "@id": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
         "label": "university-agent",
         "@type": "https://didcomm.org/didexchange/1.0/invitation"
     },
@@ -28,13 +28,13 @@
     "state": "",
     "created_at": "0001-01-01T00:00:00Z",
     "updated_at": "0001-01-01T00:00:00Z",
-    "connection_id": "d7c5eab4-88fc-42e7-9cba-9365c340b38d",
+    "connection_id": "ba44ee4b-9093-498d-ae9f-199ecaa34365",
     "request_id": "",
     "my_did": ""
 }
 ```
 
-connection ID: d7c5eab4-88fc-42e7-9cba-9365c340b38d
+connection ID: ba44ee4b-9093-498d-ae9f-199ecaa34365
 
 ### Student:   List connections
 
@@ -42,19 +42,19 @@ details last invite agent 2:
 ```json
 {
     "result": {
-        "ConnectionID": "d7c5eab4-88fc-42e7-9cba-9365c340b38d",
+        "ConnectionID": "ba44ee4b-9093-498d-ae9f-199ecaa34365",
         "State": "invited",
-        "ThreadID": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+        "ThreadID": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
         "ParentThreadID": "",
         "TheirLabel": "university-agent",
         "TheirDID": "",
         "MyDID": "",
         "ServiceEndPoint": "https://agent.university-agent.demo:8081",
         "RecipientKeys": [
-            "did:key:z6Mkm5hbK52JfbKWTWkndTie3xj19Ys23rR9rM7Nq4DFstai"
+            "did:key:z6Mkw38zvkXGvTuPiTzgAnbzTe5ZfxBnWsnMjAYLsmVWLMj1"
         ],
         "RoutingKeys": null,
-        "InvitationID": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+        "InvitationID": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
         "InvitationDID": "",
         "Implicit": false,
         "Namespace": "my"
@@ -70,7 +70,7 @@ details accept invite at agent 2:
 {
     "created_at": "0001-01-01T00:00:00Z",
     "updated_at": "0001-01-01T00:00:00Z",
-    "connection_id": "d7c5eab4-88fc-42e7-9cba-9365c340b38d"
+    "connection_id": "ba44ee4b-9093-498d-ae9f-199ecaa34365"
 }
 ```
 
@@ -80,26 +80,26 @@ details accept invite at agent 2:
 connection agent 2: 
 ```json
 {
-    "ConnectionID": "d7c5eab4-88fc-42e7-9cba-9365c340b38d",
+    "ConnectionID": "ba44ee4b-9093-498d-ae9f-199ecaa34365",
     "State": "requested",
-    "ThreadID": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+    "ThreadID": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
     "ParentThreadID": "",
     "TheirLabel": "university-agent",
     "TheirDID": "",
-    "MyDID": "did:peer:1zQmPKjEcve7hxGWom8PLCSBw5FgAuMXJjQYXXMw7MVXCR5r",
+    "MyDID": "did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt",
     "ServiceEndPoint": "https://agent.university-agent.demo:8081",
     "RecipientKeys": [
-        "did:key:z6Mkm5hbK52JfbKWTWkndTie3xj19Ys23rR9rM7Nq4DFstai"
+        "did:key:z6Mkw38zvkXGvTuPiTzgAnbzTe5ZfxBnWsnMjAYLsmVWLMj1"
     ],
     "RoutingKeys": null,
-    "InvitationID": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+    "InvitationID": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
     "InvitationDID": "",
     "Implicit": false,
     "Namespace": "my"
 }
 ```
 
-* MyDID:    did:peer:1zQmPKjEcve7hxGWom8PLCSBw5FgAuMXJjQYXXMw7MVXCR5r
+* MyDID:    did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt
 * TheirDID: 
 
 ## University: List own invite again
@@ -107,17 +107,17 @@ connection agent 2:
 connection agent 1: 
 ```json
 {
-    "ConnectionID": "34aed231-c950-4588-bf8e-8e6038e4779c",
+    "ConnectionID": "5863b19b-4c6f-41a4-9a5e-ec1596a37af5",
     "State": "requested",
-    "ThreadID": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+    "ThreadID": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
     "ParentThreadID": "",
     "TheirLabel": "student-agent",
-    "TheirDID": "did:peer:1zQmPKjEcve7hxGWom8PLCSBw5FgAuMXJjQYXXMw7MVXCR5r",
+    "TheirDID": "did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt",
     "MyDID": "",
     "ServiceEndPoint": "",
     "RecipientKeys": null,
     "RoutingKeys": null,
-    "InvitationID": "2e4d4461-411c-41f0-b5ce-2fe3ad8e6e9f",
+    "InvitationID": "ced30989-8a9d-4c58-9d52-c258f6d73bb2",
     "InvitationDID": "",
     "Implicit": false,
     "Namespace": "their"
@@ -125,7 +125,7 @@ connection agent 1:
 ```
 
 * MyDID:    
-* TheirDID: did:peer:1zQmPKjEcve7hxGWom8PLCSBw5FgAuMXJjQYXXMw7MVXCR5r
+* TheirDID: did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt
 
 ## University: Get connection states
 
@@ -142,7 +142,7 @@ details accept invite at agent 1:
 {
     "their_did": "",
     "request_id": "",
-    "connection_id": "34aed231-c950-4588-bf8e-8e6038e4779c",
+    "connection_id": "5863b19b-4c6f-41a4-9a5e-ec1596a37af5",
     "updated_at": "0001-01-01T00:00:00Z",
     "created_at": "0001-01-01T00:00:00Z",
     "state": ""
@@ -153,27 +153,65 @@ details accept invite at agent 1:
 ## University: Get connection states again
 
 * connection agent 1: state = responded
-* MyDID:    did:peer:1zQmVUG2y5pcv2FGPoZz9knFuNKeuZGjH9qnvmcQLziw375G
-* TheirDID: did:peer:1zQmPKjEcve7hxGWom8PLCSBw5FgAuMXJjQYXXMw7MVXCR5r
+* MyDID:    did:peer:1zQmP51LZPrS3GrLsf3pKRaXu5aR37fVjwBo7BmNm96iQMSC
+* TheirDID: did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt
 
 ### Student:   Get connection states again
 
 * connection agent 2: state = completed
-* MyDID:    did:peer:1zQmPKjEcve7hxGWom8PLCSBw5FgAuMXJjQYXXMw7MVXCR5r
-* TheirDID: did:peer:1zQmVUG2y5pcv2FGPoZz9knFuNKeuZGjH9qnvmcQLziw375G
+* MyDID:    did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt
+* TheirDID: did:peer:1zQmP51LZPrS3GrLsf3pKRaXu5aR37fVjwBo7BmNm96iQMSC
 
 ## University: Send credential offer
 
-{'piid': 'beb767cb-cab2-457f-892f-9c5351dc17de'}
+```json
+{
+    "piid": "54e17867-4329-4118-84d6-17c4823c999a"
+}
+```
+
 
 ### Student:   Accept credential offer with request
 
 credential offer:
 ```json
 {
-    "PIID": "6ab476d8-438d-456c-a075-3e3ff0784274",
+    "PIID": "54e17867-4329-4118-84d6-17c4823c999a",
     "Msg": {
-        "@id": "b120297b-7d8d-43c1-adcd-05f7b06c754d",
+        "@id": "54e17867-4329-4118-84d6-17c4823c999a",
+        "@type": "https://didcomm.org/issue-credential/2.0/offer-credential",
+        "credential_preview": {
+            "@type": "VerifiableCredential",
+            "attributes": [
+                {
+                    "mime-type": "string",
+                    "name": "first_name",
+                    "value": "Your first name"
+                },
+                {
+                    "mime-type": "string",
+                    "name": "given_name",
+                    "value": "Your given name"
+                }
+            ]
+        },
+        "~thread": {
+            "thid": "54e17867-4329-4118-84d6-17c4823c999a"
+        }
+    },
+    "MyDID": "did:peer:1zQmehU3f6YKUNdshV8AdinxEE1a4L8zqoMwf6srCceJv3xt",
+    "TheirDID": "did:peer:1zQmP51LZPrS3GrLsf3pKRaXu5aR37fVjwBo7BmNm96iQMSC"
+}
+```
+
+--> accept-offer: OK {}
+
+credential offer:
+```json
+{
+    "PIID": "beb767cb-cab2-457f-892f-9c5351dc17de",
+    "Msg": {
+        "@id": "97d6c8d3-baf6-4b8c-a8f6-7735dad87666",
         "@type": "https://didcomm.org/issue-credential/2.0/issue-credential",
         "credentials~attach": [
             {
@@ -202,39 +240,6 @@ credential offer:
             }
         ],
         "~thread": {
-            "thid": "6ab476d8-438d-456c-a075-3e3ff0784274"
-        }
-    },
-    "MyDID": "did:peer:1zQmVQ26moGLYUEopCh5SEqekaRf2veJamHbL37WBXvQzVr6",
-    "TheirDID": "did:peer:1zQmZo9r4edMTPUPdviCnwUS3i8zdDQRVUuby7vg4Wd7H9wb"
-}
-```
-
---> accept-offer: OK {}
-
-credential offer:
-```json
-{
-    "PIID": "beb767cb-cab2-457f-892f-9c5351dc17de",
-    "Msg": {
-        "@id": "beb767cb-cab2-457f-892f-9c5351dc17de",
-        "@type": "https://didcomm.org/issue-credential/2.0/offer-credential",
-        "credential_preview": {
-            "@type": "VerifiableCredential",
-            "attributes": [
-                {
-                    "mime-type": "string",
-                    "name": "first_name",
-                    "value": "Your first name"
-                },
-                {
-                    "mime-type": "string",
-                    "name": "given_name",
-                    "value": "Your given name"
-                }
-            ]
-        },
-        "~thread": {
             "thid": "beb767cb-cab2-457f-892f-9c5351dc17de"
         }
     },
@@ -248,30 +253,13 @@ credential offer:
 
 ## University: Accept credential request, issue cred
 
---> accept-request beb767cb-cab2-457f-892f-9c5351dc17de : OK {}
+--> accept-request 54e17867-4329-4118-84d6-17c4823c999a : OK {}
 
 ### Student:   Accept credential
 
 issuecredential actions: {'actions': []}
 
 ### Student:   List credentials
-
-```json
-{
-    "name": "demo-credentials18",
-    "id": "http://example.edu/credentials/1874",
-    "context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://www.w3.org/2018/credentials/examples/v1"
-    ],
-    "type": [
-        "VerifiableCredential",
-        "UniversityDegreeCredential"
-    ],
-    "my_did": "did:peer:1zQmUbPtJVDbDh38L8kSUQ3wVd3TDi9aKiMzsBRpDR89pU4u",
-    "their_did": "did:peer:1zQmVGNAdnsin3A5pLQNvi3WdtnJgpzxLdZgfbMocsGr9CM1"
-}
-```
 
 ```json
 {
@@ -287,6 +275,23 @@ issuecredential actions: {'actions': []}
     ],
     "my_did": "did:peer:1zQmSDwn35H69ZGG8WAeNKhYc6avVnzu2odDYBeJRbvdLnmp",
     "their_did": "did:peer:1zQmWiH2HSWNMLdHqvEBvXBTKLB49i9f6zBVpicVzYovZdDx"
+}
+```
+
+```json
+{
+    "name": "demo-credentials18",
+    "id": "http://example.edu/credentials/1874",
+    "context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/examples/v1"
+    ],
+    "type": [
+        "VerifiableCredential",
+        "UniversityDegreeCredential"
+    ],
+    "my_did": "did:peer:1zQmUbPtJVDbDh38L8kSUQ3wVd3TDi9aKiMzsBRpDR89pU4u",
+    "their_did": "did:peer:1zQmVGNAdnsin3A5pLQNvi3WdtnJgpzxLdZgfbMocsGr9CM1"
 }
 ```
 

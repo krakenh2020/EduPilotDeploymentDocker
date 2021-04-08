@@ -288,7 +288,7 @@ r_credoffer = requests.post(
     '/issuecredential/send-offer',
     json=credoffer,
     verify=False).json()
-print(r_credoffer)
+printJSON(r_credoffer)
 
 credoffer_piid = r_credoffer['piid']
 
