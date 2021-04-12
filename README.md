@@ -27,7 +27,6 @@ docker-compose up --force-recreate
 * Aries Agent: https://github.com/hyperledger/aries-framework-go
     - [agent-rest](https://github.com/hyperledger/aries-framework-go/packages/69982)
     - [webhook](https://github.com/hyperledger/aries-framework-go/blob/main/images/mocks/webhook/Dockerfile) 
-      - at the moment, this image needs to be build locally: run `make sample-webhook-docker` in [aries-framework-go](https://github.com/hyperledger/aries-framework-go)
 * Sidetree: *TODO*
 
 
