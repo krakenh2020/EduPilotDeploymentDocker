@@ -26,7 +26,7 @@ docker-compose up --force-recreate
 * [API Platform (Backend)](https://github.com/krakenh2020/EduPilotBackend) [![Build, Deploy](https://github.com/krakenh2020/EduPilotBackend/actions/workflows/docker.yml/badge.svg)](https://github.com/krakenh2020/EduPilotBackend/actions/workflows/docker.yml)
     - [kraken-edu_php](https://github.com/krakenh2020/EduPilotBackend/packages/629100)
     - [kraken-edu_frontend](https://github.com/krakenh2020/EduPilotBackend/packages/629067)
-* Hyperledger Aries Agent: https://github.com/hyperledger/aries-framework-go
+* [Hyperledger Aries Agent](https://github.com/hyperledger/aries-framework-go)
     - [agent-rest](https://github.com/krakenh2020/EduPilotFrontend/packages/666143)
     - [sample-webhook](https://github.com/krakenh2020/EduPilotFrontend/packages/666127) 
 * Sidetree: *TODO*
