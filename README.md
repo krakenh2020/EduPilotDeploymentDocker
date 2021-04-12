@@ -2,8 +2,7 @@
 
 Deployment of all server components needed to operate the demonstrator of an university credential exporter.
 
-Part of the [**H2020 Project KRAKEN**](https://krakenh2020.eu/) and the [**Verifiable Credentials for Student Mobility**](https://api.ltb.io/show/BLUOR) project funded by TU Graz 
-as a technologically enhanced administration (TEA) marketplace project.
+Part of the [**H2020 Project KRAKEN**](https://krakenh2020.eu/) and the [**Verifiable Credentials for Student Mobility**](https://api.ltb.io/show/BLUOR) project funded by TU Graz as a technologically enhanced administration (TEA) marketplace project.
 
 
 ## Startup
@@ -52,3 +51,7 @@ docker-compose up --force-recreate
 * Agent WS: `ws://10.0.2.2:8092/ws`
 
 
+
+## (Simple) Architecture Overview
+
+![(Simple) Architecture Overview](./figures/arch1.png)
