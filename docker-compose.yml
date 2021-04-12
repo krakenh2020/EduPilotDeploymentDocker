@@ -7,7 +7,7 @@ services:
 ### University Frontend #######################################################
 
   university.demo:
-    image: docker.pkg.github.com/krakenh2020/edupilotprototype1/kraken-edu_connector:latest
+    image: docker.pkg.github.com/krakenh2020/edupilotfrontend/kraken-edu_connector:latest
     working_dir: /application
     ports:
       - "${UNIVERSITY_FRONTEND_PORT}:80"

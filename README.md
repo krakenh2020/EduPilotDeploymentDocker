@@ -1,6 +1,6 @@
 # KRAKEN Education Pilot - Demo Deployment (Docker)
 
-Deployment of all server components needed to operate an university demonstrator.
+Deployment of all server components needed to operate the demonstrator of an university credential exporter.
 
 Part of the **H2020 Project KRAKEN** and the **Verifiable Credentials for Student Mobility** project funded by TU Graz 
 as a technologically enhanced administration (TEA) marketplace project.
@@ -12,21 +12,23 @@ as a technologically enhanced administration (TEA) marketplace project.
 * don't forget to `docker login` without your GitHub credentials
 
 ```bash
-sh generate_demo_keys.sh
+./generate_demo_keys.sh
+./docker-setup.sh
+
 docker-compose up --force-recreate
 ```
 
 
 ## Docker Images
 
-* Connector: https://github.com/krakenh2020/EduPilotPrototype1
-    - [kraken-edu_connector](https://github.com/krakenh2020/EduPilotPrototype1/packages/629143)
-* API Platform: https://github.com/krakenh2020/EduPilotBackend
+* Connector (Frontend): https://github.com/krakenh2020/EduPilotFrontend
+    - [kraken-edu_connector](https://github.com/krakenh2020/EduPilotFrontend/packages/629143)
+* API Platform (Backend): https://github.com/krakenh2020/EduPilotBackend
     - [kraken-edu_php](https://github.com/krakenh2020/EduPilotBackend/packages/629100)
     - [kraken-edu_frontend](https://github.com/krakenh2020/EduPilotBackend/packages/629067)
-* Aries Agent: https://github.com/hyperledger/aries-framework-go
-    - [agent-rest](https://github.com/hyperledger/aries-framework-go/packages/69982)
-    - [webhook](https://github.com/hyperledger/aries-framework-go/blob/main/images/mocks/webhook/Dockerfile) 
+* Hyperledger Aries Agent: https://github.com/hyperledger/aries-framework-go
+    - [agent-rest](https://github.com/krakenh2020/EduPilotFrontend/packages/666143)
+    - [sample-webhook](https://github.com/krakenh2020/EduPilotFrontend/packages/666127) 
 * Sidetree: *TODO*
 
 
