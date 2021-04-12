@@ -1,0 +1,47 @@
+@startuml
+skinparam componentStyle rectangle
+
+[Student]
+
+
+frame "Student System" {
+  [Mobile Wallet]
+  [Student Aries Agent]
+ }
+
+
+frame "University System" {
+  [University Aries Agent]
+  [University API]
+  [University Frontend]
+}
+
+
+database "University Storage" {
+ [CampusOnline]
+ [LDAP]
+}
+
+
+cloud {
+  [Sidetree]
+  [DL]
+}
+
+
+[Student] ..> [University Frontend]
+
+[Student] ..> [Mobile Wallet]
+[Mobile Wallet] - [Student Aries Agent]
+[Student Aries Agent] -- [University Aries Agent]
+
+[Student Aries Agent] - [Sidetree]
+[Sidetree] - [University Aries Agent]
+[DL] - [Sidetree]
+
+[University Aries Agent] - [University API]
+[University API] - [University Frontend]
+[University API] -- [CampusOnline]
+[University API] -- [LDAP]
+
+@enduml
