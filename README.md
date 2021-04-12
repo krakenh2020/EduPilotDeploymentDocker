@@ -1,4 +1,4 @@
-# KRAKEN Education Pilot - Demo Deployment
+# KRAKEN Education Pilot - Demo Deployment (Docker)
 
 Deployment of all server components needed to operate an university demonstrator.
 
