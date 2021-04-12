@@ -46,7 +46,7 @@ docker-compose up --force-recreate
     - Webhook: http://localhost:8093/
 
 
-### To test mobile wallet of student:
+### To test [mobile wallet](https://scm.atosresearch.eu/ari/kraken/ssi-ledgeruself-mobile) of student:
 
 * Agent: `http://10.0.2.2:8092`
 * Agent WS: `ws://10.0.2.2:8092/ws`
