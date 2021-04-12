@@ -2,7 +2,7 @@
 
 Deployment of all server components needed to operate the demonstrator of an university credential exporter.
 
-Part of the **H2020 Project KRAKEN** and the **Verifiable Credentials for Student Mobility** project funded by TU Graz 
+Part of the [**H2020 Project KRAKEN**](https://krakenh2020.eu/) and the [**Verifiable Credentials for Student Mobility**](https://api.ltb.io/show/BLUOR) project funded by TU Graz 
 as a technologically enhanced administration (TEA) marketplace project.
 
 
@@ -21,9 +21,9 @@ docker-compose up --force-recreate
 
 ## Docker Images
 
-* Connector (Frontend): https://github.com/krakenh2020/EduPilotFrontend
+* Connector (Frontend): https://github.com/krakenh2020/EduPilotFrontend [![Build, Test, Deploy](https://github.com/krakenh2020/EduPilotPrototype1/actions/workflows/test-and-deploy.yml/badge.svg)](https://github.com/krakenh2020/EduPilotPrototype1/actions/workflows/test-and-deploy.yml)
     - [kraken-edu_connector](https://github.com/krakenh2020/EduPilotFrontend/packages/629143)
-* API Platform (Backend): https://github.com/krakenh2020/EduPilotBackend
+* API Platform (Backend): https://github.com/krakenh2020/EduPilotBackend [![Build, Deploy](https://github.com/krakenh2020/EduPilotBackend/actions/workflows/docker.yml/badge.svg)](https://github.com/krakenh2020/EduPilotBackend/actions/workflows/docker.yml)
     - [kraken-edu_php](https://github.com/krakenh2020/EduPilotBackend/packages/629100)
     - [kraken-edu_frontend](https://github.com/krakenh2020/EduPilotBackend/packages/629067)
 * Hyperledger Aries Agent: https://github.com/hyperledger/aries-framework-go
