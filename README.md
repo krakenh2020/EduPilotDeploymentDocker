@@ -47,6 +47,8 @@ docker-compose up --force-recreate
 
 ### To test [mobile wallet](https://scm.atosresearch.eu/ari/kraken/ssi-ledgeruself-mobile) of student:
 
+(use settings UI, or adapt `urlServer` in `src/main/java/eu/atos/ledgerUself/LedgerUSelf.kt`)
+
 * Agent: `http://10.0.2.2:8092`
 * Agent WS: `ws://10.0.2.2:8092/ws`
 
