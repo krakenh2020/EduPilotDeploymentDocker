@@ -1,0 +1,44 @@
+@startuml
+skinparam componentStyle rectangle
+
+cloud {
+  component "    KRAKEN\nMarketplace" as KRAKEN #aliceblue;line:blue;line.dotted;text:blue
+}
+
+frame "Student System" {
+  [Mobile Wallet]
+ }
+
+:Student: #pink;line:red;line.bold;text:red
+
+
+frame "University System" {
+  [University API]
+  [University Frontend]
+}
+
+
+database "University Storage" {
+ [CampusOnline]
+ [LDAP]
+}
+
+
+cloud {
+  [DL]
+}
+
+[Mobile Wallet] -le- KRAKEN
+
+[Student] ..> [University Frontend]
+
+[Student] .le.> [Mobile Wallet]
+[Mobile Wallet] -do- [University API]
+
+[Mobile Wallet] -ri- [DL]
+[University API] -ri- [DL]
+
+[University API] -ri- [University Frontend]
+[University API] -do- [CampusOnline]
+[University API] -do- [LDAP]
+@enduml
