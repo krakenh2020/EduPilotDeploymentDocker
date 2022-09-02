@@ -36,8 +36,8 @@ services:
     #working_dir: /application
     volumes:
       #- ..:/application 
-      - ./php-fpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
-      - ./php-fpm/php-fpm-overrides.conf:/etc/php/7.3/fpm/pool.d/z-overrides.conf
+      - ./php-fpm/php-ini-overrides.ini:/etc/php/8.1/fpm/conf.d/99-overrides.ini
+      - ./php-fpm/php-fpm-overrides.conf:/etc/php/8.1/fpm/pool.d/z-overrides.conf
     networks:
       - kraken_edu_agent_net # API calls aries agent
       - kraken_edu_university_net # PHP container called by API
